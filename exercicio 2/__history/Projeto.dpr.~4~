@@ -1,0 +1,26 @@
+program Projeto;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+  var
+  nome: String;
+  idade : Real;
+
+begin
+  try
+      WriteLn('insire seu nome:');
+      ReadLn(nome);
+      WriteLn('insira sua idade');
+      ReadLn(idade);
+      WriteLn('                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ');
+      WriteLn('Olá' + nome + '. Atualmente você possui' + idade + 'anos. Daqui a anos você terá ' + idade + 'anos');
+  except
+    on E: Exception do
+      Writeln(E.ClassName, ': ', E.Message);
+  end;
+end.

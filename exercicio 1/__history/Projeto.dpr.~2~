@@ -1,0 +1,26 @@
+program Projeto;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+begin
+  try
+
+  var
+    text1,text2,text3 : Real;
+
+  begin
+  ReadLn(text1,text2,text3)
+  WriteLn(text1+text2)
+  end;
+
+  except
+    on E: Exception do
+      Writeln(E.ClassName, ': ', E.Message);
+  end;
+end.
+
